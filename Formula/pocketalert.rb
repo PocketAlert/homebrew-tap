@@ -5,13 +5,13 @@
 class Pocketalert < Formula
   desc "Send push notifications to your phone from the terminal"
   homepage "https://pocketalert.app"
-  version "2.0.0"
+  version "2.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/PocketAlert/cli/releases/download/v2.0.0/pocketalert_darwin_amd64.tar.gz"
-      sha256 "ccc9fd6125b895bbc97fceee6c8b23bd14a84655f284b6b3d92629eff6803c41"
+      url "https://github.com/PocketAlert/cli/releases/download/v2.1.0/pocketalert_darwin_amd64.tar.gz"
+      sha256 "94dba384ad146931862dcd904c17058dad607f9b00d18c5ab58c03bb67e75daf"
 
       define_method(:install) do
         bin.install "pocketalert"
@@ -19,8 +19,8 @@ class Pocketalert < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/PocketAlert/cli/releases/download/v2.0.0/pocketalert_darwin_arm64.tar.gz"
-      sha256 "33f4c8a5b2a7f13aa36a202466f9b09edc04adc36430d7f15d0e3f204c35fb42"
+      url "https://github.com/PocketAlert/cli/releases/download/v2.1.0/pocketalert_darwin_arm64.tar.gz"
+      sha256 "b67346b4165f8e4ea80104f5052a2cd63b395139e480369c340489e00e94510a"
 
       define_method(:install) do
         bin.install "pocketalert"
@@ -31,16 +31,16 @@ class Pocketalert < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/PocketAlert/cli/releases/download/v2.0.0/pocketalert_linux_amd64.tar.gz"
-      sha256 "149a5f58a24c7909fd2aa7a6a7c432e75c69747a278ccdae5a4170492cf2d4d8"
+      url "https://github.com/PocketAlert/cli/releases/download/v2.1.0/pocketalert_linux_amd64.tar.gz"
+      sha256 "e33292d36f6f7db4e0c9bed7c0375df015f5200de030f5a7f90075c93a91d223"
       define_method(:install) do
         bin.install "pocketalert"
         generate_completions_from_executable(bin/"pocketalert", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/PocketAlert/cli/releases/download/v2.0.0/pocketalert_linux_arm64.tar.gz"
-      sha256 "8e009810f105ce5563074deb6558a7b0e4981e12207c4a6e6bced9f89cc0e2dd"
+      url "https://github.com/PocketAlert/cli/releases/download/v2.1.0/pocketalert_linux_arm64.tar.gz"
+      sha256 "00f796c9acf02b7e72ea589d5427d81befc03c6fe0cdb2d1f890861fb82dc015"
       define_method(:install) do
         bin.install "pocketalert"
         generate_completions_from_executable(bin/"pocketalert", "completion")
